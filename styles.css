@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(166deg, rgba(96,22,157,1) 11%, rgba(48,97,214,1) 100%);
+}
+
+.search-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-family: Righteous, sans-serif;
+  font-size: 120px;
+  background: linear-gradient(166deg, rgb(212, 50, 158) 11%, rgb(65, 175, 202) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.search {
+  font-size: 25px;
+  color: whitesmoke;
+  outline: none;
+  width: 550px;
+  padding: 20px;
+  border-radius: 25px;
+  background: linear-gradient(166deg, rgb(92, 42, 75) 11%, rgb(163, 58, 196) 100%);
+  border: solid white;
+}
+
+button {
+  width: 50px;
+  height: 40px;
+  border-radius: 25%;
+  margin-top: 10px;
+}
+
