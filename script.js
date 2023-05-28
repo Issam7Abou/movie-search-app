@@ -1,4 +1,4 @@
-const apiUrl = 'http://www.omdbapi.com/?apikey=4f8f00d1&t=';
+const apiUrl = 'http://www.omdbapi.com/?apikey=[api-key]&t=';
 let name1;
 
 // func that is lanched when the user searches for movie
