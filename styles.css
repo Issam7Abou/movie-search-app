@@ -9,7 +9,7 @@ body {
   padding: 0;
   background: linear-gradient(166deg, rgba(96,22,157,1) 11%, rgba(48,97,214,1) 100%);
 }
-
+/* SEARCH UI STYLING */
 .search-container {
   width: 100vw;
   height: 100vh;
@@ -32,15 +32,60 @@ body {
   outline: none;
   width: 550px;
   padding: 20px;
-  border-radius: 25px;
+  border-radius: 50px;
   background: linear-gradient(166deg, rgb(92, 42, 75) 11%, rgb(163, 58, 196) 100%);
-  border: solid white;
+  border: solid rgb(255, 255, 255);
 }
 
-button {
-  width: 50px;
-  height: 40px;
-  border-radius: 25%;
-  margin-top: 10px;
+.button {
+  text-align: center;
+  font-family: Righteous, sans-serif;
+  font-size: 20px;
+  padding: 10px;
+  margin-top: 20px;
+  background: linear-gradient(166deg, rgb(92, 42, 75) 11%, rgb(163, 58, 196) 100%);
+  border: solid rgb(255, 255, 255);
+  transition: 0.4s ease;
 }
 
+.button:hover {
+  cursor: pointer;
+  transform: scale(0.95);
+}
+
+/* RESULT UI STYLING */
+.showResult {
+  background: linear-gradient(166deg, rgb(92, 42, 75) 11%, rgb(163, 58, 196) 100%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.result {
+  padding: 25px;
+  margin-top: 80px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: radial-gradient(at left top, #2E9AC9, #6F1C80);
+  color: aliceblue;
+  border-radius: 20px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+img {
+  width: 35%;
+  border-radius: 10px;
+}
+
+.movieInfo {
+  display: flex;
+}

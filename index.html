@@ -8,10 +8,24 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- UI to search for Movie & Series -->
   <div class="search-container">
     <h1 class="title">MoviFlix</h1>
     <input type="text" id="userInput" class="search" placeholder="Search for a Movie">
-    <button onclick="userInput()">GO!</button>
+    <input class="button" onclick="showMovie()" value="SEARCH">
+  </div>
+  <!-- UI to show the Movie or Series -->
+  <div class="showResult">
+    <div class="result">
+      <h2>Movie Title</h2>
+      <img src="https://i.pinimg.com/originals/b7/ef/46/b7ef46889d98ab8840058835d3f6cfb9.jpg" alt="movie">
+      <div class="movieInfo">
+        <h4>Director</h4>
+        <h4>Time</h4>
+        <h4>Rating</h4>
+      </div>
+      <p>Sinopse</p>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
