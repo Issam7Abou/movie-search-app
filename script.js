@@ -1,4 +1,4 @@
-const apiUrl = 'http://www.omdbapi.com/?apikey=[api-key]&t=';
+const apiUrl = 'http://www.omdbapi.com/?apikey=4f8f00d1&t=';
 let name1;
 
 // func that is lanched when the user searches for movie
@@ -11,6 +11,7 @@ function showMovie() {
   fetchData(userInput)
 }
 
+//Async func to get the data
 const fetchData = async function(arg) {
   const response = await fetch(`${apiUrl}${arg}`);
   const data = await response.json();
@@ -18,6 +19,7 @@ const fetchData = async function(arg) {
   buildUI(data)
 }
 
+// this will build the Movie details UI
 function buildUI(data) {
   const title = document.querySelector('h2');
   title.textContent = data.Title;
@@ -27,5 +29,11 @@ function buildUI(data) {
   sinopse.textContent = `SINOPSE: ${data.Plot}`;
 }
 
-
-//On load
+function returnPage() {
+  // Hide Movie Deatils UI and goes 
+  const divMovie = document.querySelector('.showResult');
+  divMovie.style.display = 'none';
+  // Back to Search UI
+  const div = document.querySelector('.search-container');
+  div.style.display = '';
+}
