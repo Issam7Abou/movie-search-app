@@ -1,4 +1,4 @@
-const apiUrl = 'http://www.omdbapi.com/?apikey=4f8f00d1&t=';
+const apiUrl = 'http://www.omdbapi.com/?apikey={APIKEY}=';
 let div = document.querySelector('.search-container');
 let div2 = document.querySelector('.showResult');
 
