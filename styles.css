@@ -20,7 +20,7 @@ body {
 
 .title {
   font-family: Righteous, sans-serif;
-  font-size: 120px;
+  font-size: 115px;
   background: linear-gradient(166deg, rgb(212, 50, 158) 11%, rgb(65, 175, 202) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -41,8 +41,9 @@ body {
   text-align: center;
   font-family: Righteous, sans-serif;
   font-size: 20px;
-  padding: 10px;
+  padding: 15px;
   margin-top: 20px;
+  border-radius: 25px;
   background: linear-gradient(166deg, rgb(92, 42, 75) 11%, rgb(163, 58, 196) 100%);
   border: solid rgb(255, 255, 255);
   transition: 0.4s ease;
