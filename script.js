@@ -1,4 +1,4 @@
-const apiUrl = 'http://www.omdbapi.com/?apikey={APIKEY}=';
+const apiUrl = 'http://www.omdbapi.com/?apikey={}=';
 let div = document.querySelector('.search-container');
 let div2 = document.querySelector('.showResult');
 
@@ -22,12 +22,18 @@ const fetchData = async function(arg) {
 
 // build the UI to show movie
 function buildUI(data) {
-  const title = document.querySelector('h2');
+  const title = document.querySelector('.movie-title');
   title.textContent = data.Title;
-  const img = document.querySelector('img');
+  const img = document.querySelector('.banner');
   img.src = data.Poster;
-  const sinopse = document.querySelector('p');
-  sinopse.textContent = `SINOPSE: ${data.Plot}`;
+  const director = document.querySelector('.director');
+  director.textContent = data.Director;
+  const time = document.querySelector('.run-time');
+  time.textContent = data.Runtime;
+  const rating = document.querySelector('.ratingImdb');
+  rating.textContent = data.imdbRating;
+  const sinopse = document.querySelector('.sinopse');
+  sinopse.textContent = data.Plot;
 }
 
 function returnBtn() {

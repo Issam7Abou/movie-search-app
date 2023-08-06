@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
 * {
   box-sizing: border-box;
@@ -7,7 +8,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(166deg, rgba(96,22,157,1) 11%, rgba(48,97,214,1) 100%);
+  background: linear-gradient(166deg, rgb(0, 0, 0) 11%, rgb(91, 91, 91) 100%);
 }
 /* SEARCH UI STYLING */
 .search-container {
@@ -21,19 +22,18 @@ body {
 .title {
   font-family: Righteous, sans-serif;
   font-size: 115px;
-  background: linear-gradient(166deg, rgb(212, 50, 158) 11%, rgb(65, 175, 202) 100%);
+  background: linear-gradient(166deg, rgb(167, 157, 53) 11%, rgb(207, 86, 45) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .search {
   font-size: 25px;
-  color: whitesmoke;
   outline: none;
   width: 550px;
   padding: 20px;
   border-radius: 50px;
-  background: linear-gradient(166deg, rgb(92, 42, 75) 11%, rgb(163, 58, 196) 100%);
+  background: linear-gradient(166deg, rgb(255, 255, 255) 11%, rgb(255, 255, 255) 100%);
   border: solid rgb(255, 255, 255);
 }
 
@@ -44,19 +44,18 @@ body {
   padding: 15px;
   margin-top: 20px;
   border-radius: 25px;
-  background: linear-gradient(166deg, rgb(92, 42, 75) 11%, rgb(163, 58, 196) 100%);
-  border: solid rgb(255, 255, 255);
+  background: white;
   transition: 0.4s ease;
 }
 
 .button:hover {
   cursor: pointer;
-  transform: scale(0.95);
+  transform: scale(0.97);
 }
 
 /* RESULT UI STYLING */
 .showResult {
-  background: linear-gradient(166deg, rgb(92, 42, 75) 11%, rgb(163, 58, 196) 100%);
+  background: linear-gradient(166deg, rgb(0, 0, 0) 11%, rgb(91, 91, 91) 100%);
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -67,23 +66,20 @@ body {
 .result {
   padding: 25px;
   margin-top: 80px;
-  width: 60%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: radial-gradient(at left top, #2E9AC9, #6F1C80);
+  background: linear-gradient(166deg, rgb(0, 0, 0) 11%, rgb(91, 91, 91) 100%);
   color: aliceblue;
-  border-radius: 20px;
 }
 
-h2 {
+.movie-title {
+  font-family: 'Inter', sans-serif;
   font-size: 35px;
 }
 
 img {
-  width: 35%;
+  width: 17%;
   border-radius: 10px;
 }
 
@@ -91,12 +87,48 @@ img {
   display: flex;
 }
 
+.movieInfo > h4:not(:first-child) {
+  margin-left: 65px;
+}
+
+.movie-time {
+  display: flex;
+  align-items: center;
+  margin-left: 65px;
+}
+
+.fa-clock {
+  font-size: 17px;
+  margin-right: 8px;
+}
+
+.ratings {
+  display: flex;
+  align-items: center;
+  margin-left: 65px;
+}
+
+.fa-imdb {
+  font-size: 35px;
+  margin-right: 5px;
+}
+
+.sinopse {
+  font-family: arial, sans-serif;
+  font-size: 18px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Return Home Page */
 .return-btn {
   margin-top: 15px;
   padding: 15px;
   border-radius: 7px;
-  background: radial-gradient(at left top, #2E9AC9, #6F1C80);
-  color: white;
+  background: white;
+  color: rgb(0, 0, 0);
   transition: transform 0.3s ease;
   border-style: none;
 }
@@ -104,8 +136,4 @@ img {
 .return-btn:hover {
   transform: scale(0.96);
   cursor: pointer;
-}
-
-.hidden {
-  display: none;
 }

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MoviFlix</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 </head>
 <body>
   <!-- UI to search for Movie & Series -->
@@ -18,14 +19,20 @@
   <!-- UI to show the Movie or Series -->
   <div class="showResult hidden">
     <div class="result">
-      <h2>Movie Title</h2>
-      <img src="https://i.pinimg.com/originals/b7/ef/46/b7ef46889d98ab8840058835d3f6cfb9.jpg" alt="movie">
+      <h2 class="movie-title"></h2>
+      <img class="banner" src="" alt="movie">
       <div class="movieInfo">
-        <h4>Director</h4>
-        <h4>Time</h4>
-        <h4>Rating</h4>
+        <h4 class="director"></h4>
+        <div class="movie-time">
+          <i class="fa-solid fa-clock" style="color: #ffffff;"></i>
+          <h4 class="run-time"></h4>
+        </div>
+        <div class="ratings">
+          <i class="fa-brands fa-imdb" style="color: #d0b425;"></i>
+          <h4 class="ratingImdb"></h4>
+        </div>
       </div>
-      <p>Sinopse</p>
+      <p class="sinopse"></p>
     </div>
     <button class='return-btn' onclick="returnBtn()">RETURN</button>
   </div>
