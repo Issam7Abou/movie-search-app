@@ -1,4 +1,16 @@
-const apiUrl = 'http://www.omdbapi.com/?apikey={}=';
+// TEST
+const api = 'http://www.omdbapi.com/?apikey=&s=popular';
+const popularMovies = async function(arg) {
+  const response2 = await fetch(arg);
+  const data2 = await response2.json();
+  console.log(data2.Search[0]);
+}
+
+popularMovies(api);
+
+// TEST
+
+const apiUrl = 'http://www.omdbapi.com/?apikey=&t=';
 let div = document.querySelector('.search-container');
 let div2 = document.querySelector('.showResult');
 
@@ -16,7 +28,6 @@ function showMovie() {
 const fetchData = async function(arg) {
   const response = await fetch(`${apiUrl}${arg}`);
   const data = await response.json();
-  console.log(data);
   buildUI(data)
 }
 
@@ -37,9 +48,8 @@ function buildUI(data) {
 }
 
 function returnBtn() {
+  div2.style.display = 'none';
   div.style.display = 'flex';
-  const userInput = document.getElementById('userInput');
-  userInput.value = '';
 }
 
 //On load

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MoviFlix</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <!-- UI to search for Movie & Series -->
@@ -22,7 +22,10 @@
       <h2 class="movie-title"></h2>
       <img class="banner" src="" alt="movie">
       <div class="movieInfo">
-        <h4 class="director"></h4>
+        <div class="director">
+          <i class="fa-solid fa-clapperboard"></i>
+          <h4 class="director-name"></h4>
+        </div>
         <div class="movie-time">
           <i class="fa-solid fa-clock" style="color: #ffffff;"></i>
           <h4 class="run-time"></h4>
@@ -32,9 +35,30 @@
           <h4 class="ratingImdb"></h4>
         </div>
       </div>
+      <div class="line"></div>
       <p class="sinopse"></p>
     </div>
     <button class='return-btn' onclick="returnBtn()">RETURN</button>
+    <div class="trending-container">
+      <h2>Trending..</h2>
+      <div class="movie-trend">
+        <div class="movie-1">
+          <img src="" alt="">
+        </div>
+        <div class="movie-2">
+          <img src="" alt="">
+        </div>
+        <div class="movie-3">
+          <img src="" alt="">
+        </div>
+        <div class="movie-4">
+          <img src="" alt="">
+        </div>
+        <div class="movie-5">
+          <img src="" alt="">
+        </div>
+      </div>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>

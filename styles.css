@@ -69,7 +69,7 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(166deg, rgb(0, 0, 0) 11%, rgb(91, 91, 91) 100%);
+  background: linear-gradient( rgb(0, 0, 0) 11%, rgb(91, 91, 91) 100%);
   color: aliceblue;
 }
 
@@ -89,6 +89,15 @@ img {
 
 .movieInfo > h4:not(:first-child) {
   margin-left: 65px;
+}
+
+.director {
+  display: flex;
+  align-items: center;
+}
+
+.fa-clapperboard {
+  font-size: 17px;
 }
 
 .movie-time {
@@ -113,9 +122,16 @@ img {
   margin-right: 5px;
 }
 
+.line {
+  background-color: orange;
+  padding: 1px;
+  width: 60%;
+}
+
 .sinopse {
   font-family: arial, sans-serif;
   font-size: 18px;
+  width: 60%;
 }
 
 .hidden {
@@ -126,7 +142,7 @@ img {
 .return-btn {
   margin-top: 15px;
   padding: 15px;
-  border-radius: 7px;
+  border-radius: 4px;
   background: white;
   color: rgb(0, 0, 0);
   transition: transform 0.3s ease;
@@ -137,3 +153,23 @@ img {
   transform: scale(0.96);
   cursor: pointer;
 }
+
+/* Trending UI */
+.trending-container {
+ color: white;
+ margin-top: 20px;
+ font-size: larger;
+}
+
+.movie-trend {
+  display: flex;
+}
+
+.movie-1 {
+  
+}
+
+.movie-2 {
+
+}
+
