@@ -1,5 +1,5 @@
 //////////////////// TEST  /////// TEST  /////// TEST  /////// TEST
-const api = 'http://www.omdbapi.com/?apikey=4f8f00d1&s=movie&type=movie&y=2022';
+const api = 'http://www.omdbapi.com/?apikey={ApiKey}&s=movie&type=movie&y=2022';
 const popularMovies = async function(arg) {
   const response2 = await fetch(arg);
   const data2 = await response2.json();
@@ -7,7 +7,7 @@ const popularMovies = async function(arg) {
 }
 //////////////////// TEST  /////// TEST  /////// TEST  /////// TEST
 
-const apiUrl = 'http://www.omdbapi.com/?apikey=4f8f00d1&t=';
+const apiUrl = 'http://www.omdbapi.com/?apikey={ApiKey}&t=';
 let div = document.querySelector('.search-container');
 let div2 = document.querySelector('.showResult');
 
