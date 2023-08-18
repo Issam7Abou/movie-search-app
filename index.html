@@ -12,7 +12,7 @@
   <!-- UI to search for Movie & Series -->
   <div class="search-container">
     <h1 class="title">MoviFlix</h1>
-    <input type="text" id="userInput" class="search" placeholder="Search for a Movie">
+    <input type="text" id="userInput" class="search" onkeydown="handleKeyPress(event)" placeholder="Search for a Movie">
     <!-- <input class="button" onclick="showMovie()" value="SEARCH"> -->
     <button class="button" onclick="showMovie()" value="SEARCH">SEARCH</button>
   </div>
@@ -42,19 +42,19 @@
     <div class="trending-container">
       <h2>Trending..</h2>
       <div class="movie-trend">
-        <div class="movie-1">
+        <div class="movie-1 movie">
           <img src="" alt="">
         </div>
-        <div class="movie-2">
+        <div class="movie-2 movie">
           <img src="" alt="">
         </div>
-        <div class="movie-3">
+        <div class="movie-3 movie">
           <img src="" alt="">
         </div>
-        <div class="movie-4">
+        <div class="movie-4 movie">
           <img src="" alt="">
         </div>
-        <div class="movie-5">
+        <div class="movie-5 movie">
           <img src="" alt="">
         </div>
       </div>
