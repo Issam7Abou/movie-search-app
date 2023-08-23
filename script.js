@@ -1,13 +1,4 @@
-//////////////////// TEST  /////// TEST  /////// TEST  /////// TEST
-const api = 'http://www.omdbapi.com/?apikey={ApiKey}&s=movie&type=movie&y=2022';
-const popularMovies = async function(arg) {
-  const response2 = await fetch(arg);
-  const data2 = await response2.json();
-  console.log(data2.Search);
-}
-//////////////////// TEST  /////// TEST  /////// TEST  /////// TEST
-
-const apiUrl = 'http://www.omdbapi.com/?apikey={ApiKey}&t=';
+const apiUrl = 'http://www.omdbapi.com/?apikey=4f8f00d1&t=';
 let div = document.querySelector('.search-container');
 let div2 = document.querySelector('.showResult');
 
@@ -18,8 +9,10 @@ function showMovie() {
     // Hide Search UI & Show Result UI
     div.style.display = 'none';
     div2.style.display = 'flex';
+    // Call func to show TRENDING MOVIES
+    trendingMovies();
     // Call fetchData to get movie from API
-  fetchData(userInput)
+    fetchData(userInput)
   }
 }
 
@@ -58,5 +51,18 @@ function returnBtn() {
   div.style.display = 'flex';
 }
 
+// Func that display TRENDING MOVIES
+async function trendingMovies() {
+  const api = 'http://www.omdbapi.com/?apikey=4f8f00d1&s=movie&type=movie&y=2022';
+  const response2 = await fetch(api);
+  const data2 = await response2.json();
+  console.log(data2.Search[0].Poster);
+  // Build the UI
+  for (let i = 1; i <= 5; i++) {
+    const movieImgSrc = document.querySelector(`.movie-${i} img`);
+    movieImgSrc.src = data2.Search[i].Poster;
+  }
+}
+
 //On load
-popularMovies(api);
+trendingMovies();
