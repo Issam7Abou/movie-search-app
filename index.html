@@ -19,43 +19,45 @@
   <!-- UI to show the Movie or Series -->
   <div class="showResult hidden">
     <div class="result">
-      <h2 class="movie-title"></h2>
-      <img class="banner" src="" alt="movie">
-      <div class="movieInfo">
-        <div class="director">
-          <i class="fa-solid fa-clapperboard"></i>
-          <h4 class="director-name"></h4>
+      <div class="transparentUI">
+        <h2 class="movie-title"></h2>
+        <img class="banner" src="" alt="movie">
+        <div class="movieInfo">
+          <div class="director">
+            <i class="fa-solid fa-user-tie"></i>
+            <h4 class="director-name"></h4>
+          </div>
+          <div class="movie-time">
+            <i class="fa-solid fa-clock" style="color: #ffffff;"></i>
+            <h4 class="run-time"></h4>
+          </div>
+          <div class="ratings">
+            <i class="fa-brands fa-imdb" style="color: #d0b425;"></i>
+            <h4 class="ratingImdb"></h4>
+          </div>
         </div>
-        <div class="movie-time">
-          <i class="fa-solid fa-clock" style="color: #ffffff;"></i>
-          <h4 class="run-time"></h4>
-        </div>
-        <div class="ratings">
-          <i class="fa-brands fa-imdb" style="color: #d0b425;"></i>
-          <h4 class="ratingImdb"></h4>
-        </div>
+        <div class="line"></div>
+        <p class="sinopse"></p>
       </div>
-      <div class="line"></div>
-      <p class="sinopse"></p>
     </div>
-    <button class='return-btn' onclick="returnBtn()">RETURN</button>
+    <button class='return-btn' onclick="returnBtn()"><i class="fa-solid fa-rotate-left"></i> Return</button>
     <div class="trending-container">
-      <h2>Trending..</h2>
+      <h2 class="trend-title">Trending in 2023</h2>
       <div class="movie-trend">
         <div class="movie-1 movie">
-          <img src="" alt="">
+          <img class="trend-img" src="" alt="">
         </div>
         <div class="movie-2 movie">
-          <img src="" alt="">
+          <img class="trend-img" src="" alt="">
         </div>
         <div class="movie-3 movie">
-          <img src="" alt="">
+          <img class="trend-img" src="" alt="">
         </div>
         <div class="movie-4 movie">
-          <img src="" alt="">
+          <img class="trend-img" src="" alt="">
         </div>
         <div class="movie-5 movie">
-          <img src="" alt="">
+          <img class="trend-img" src="" alt="">
         </div>
       </div>
     </div>

@@ -1,6 +1,14 @@
+// Variables for HTML tags
 const apiUrl = 'http://www.omdbapi.com/?apikey=4f8f00d1&t=';
-let div = document.querySelector('.search-container');
-let div2 = document.querySelector('.showResult');
+const div = document.querySelector('.search-container');
+const div2 = document.querySelector('.showResult');
+const result = document.querySelector('.result');
+const title = document.querySelector('.movie-title');
+const img = document.querySelector('.banner');
+const director = document.querySelector('.director');
+const time = document.querySelector('.run-time');
+const rating = document.querySelector('.ratingImdb');
+const sinopse = document.querySelector('.sinopse');
 
 // func that is lanched when the user searches for movie
 function showMovie() {
@@ -20,23 +28,21 @@ function showMovie() {
 const fetchData = async function(arg) {
   const response = await fetch(`${apiUrl}${arg}`);
   const data = await response.json();
+  console.log(data)
   buildUI(data)
 }
 
 // build the UI to show movie
 function buildUI(data) {
-  const title = document.querySelector('.movie-title');
+  // Build Movie UI information
   title.textContent = data.Title;
-  const img = document.querySelector('.banner');
   img.src = data.Poster;
-  const director = document.querySelector('.director');
   director.textContent = data.Director;
-  const time = document.querySelector('.run-time');
   time.textContent = data.Runtime;
-  const rating = document.querySelector('.ratingImdb');
   rating.textContent = data.imdbRating;
-  const sinopse = document.querySelector('.sinopse');
   sinopse.textContent = data.Plot;
+  // Background Movie UI
+  result.style.backgroundImage = `url(${data.Poster})`;
 }
 
 //function that fires the showMovie() when the key 'Enter' is pressed in the userInput
@@ -53,14 +59,14 @@ function returnBtn() {
 
 // Func that display TRENDING MOVIES
 async function trendingMovies() {
-  const api = 'http://www.omdbapi.com/?apikey=4f8f00d1&s=movie&type=movie&y=2022';
-  const response2 = await fetch(api);
-  const data2 = await response2.json();
-  console.log(data2.Search[0].Poster);
+  const api = 'http://www.omdbapi.com/?apikey=4f8f00d1&s=movie&type=movie&y=2023';
+  const response = await fetch(api);
+  const data = await response.json();
+  console.log(data.Search);
   // Build the UI
   for (let i = 1; i <= 5; i++) {
     const movieImgSrc = document.querySelector(`.movie-${i} img`);
-    movieImgSrc.src = data2.Search[i].Poster;
+    movieImgSrc.src = data.Search[i].Poster;
   }
 }
 
