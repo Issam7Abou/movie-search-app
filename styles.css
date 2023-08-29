@@ -177,6 +177,10 @@ img {
 }
 
 /* Trending UI */
+.trending-container {
+  margin-bottom: 320px;
+}
+
 .trend-title {
   margin-left: 40px;
   font-size: 40px;
@@ -184,10 +188,11 @@ img {
   color: rgb(255,140,0);
 }
 
-.movie-trend {
+.movie-trend-container {
   display: flex;
   justify-content: space-between;
   padding: 0;
+  margin-bottom: 120px;
 }
 
 .movie {
@@ -202,4 +207,9 @@ img {
 
 .trend-img {
   width: 80%;
+  border: 2px solid white;
+}
+
+.trend-img:hover {
+  border: 2px solid rgb(255,140,0);
 }
